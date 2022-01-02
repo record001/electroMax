@@ -1,0 +1,148 @@
+.service {
+  padding-top: 66px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  &__left {
+    background-image: url(../images/service.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__right {
+    position: relative;
+    padding: 120px 0 100px 30px;
+    background-image: url(../images/ser1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: #036db9;
+
+    .bolt1 {
+      width: 15%;
+
+      position: absolute;
+      top: 3%;
+      left: 33%;
+    }
+    .bolt2 {
+      width: 15%;
+
+      position: absolute;
+      top: 3%;
+      right: 1%;
+    }
+    .bolt3 {
+      width: 15%;
+
+      position: absolute;
+      bottom: 0%;
+      left: 57%;
+    }
+    .drill {
+      position: absolute;
+      left: 55%;
+      bottom: -7%;
+      width: 45%;
+    }
+    .atverka {
+      width: 42%;
+
+      position: absolute;
+      bottom: -17%;
+      left: 15%;
+    }
+    .ploski {
+      width: 42%;
+
+      position: absolute;
+      top: -9%;
+      left: 45%;
+    }
+    .gayka {
+      width: 15%;
+      left: 53%;
+      top: 46%;
+      position: absolute;
+    }
+  }
+
+  &__text {
+    width: 60%;
+    text-align: left;
+  }
+  &__list {
+    margin-top: 26px;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      img {
+        margin-right: 12px;
+      }
+      p {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 900px) {
+  .service {
+    &__title {
+      font-size: 27px;
+      line-height: 40px;
+    }
+
+    &__right .ploski {
+      top: -5%;
+    }
+
+    &__right .atverka {
+      bottom: -10%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .service {
+    &__right .drill {
+      bottom: 12%;
+  }
+
+    &__right .ploski {
+      top: -5%;
+    }
+
+    &__right .atverka {
+      bottom: 1%;
+    }
+  }
+}
+@media (max-width: 500px) {
+
+  .service {
+
+   grid-template-columns: 100%;
+   grid-template-rows: 100%;
+   padding-top: 9px;
+
+   &__left {
+     display: none;
+   }
+
+    &__title {
+      text-align: center;
+    }
+  }
+}

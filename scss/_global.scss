@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+.container {
+  width: 1130px;
+  max-width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@mixin df_jcsb_aic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// modal
+
+
+
+.modal {
+
+  z-index: 1000;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #e5e5e5;
+
+  display: none;
+
+  .close_btn {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top: 5%;
+    left: 75%;
+
+    &:hover {
+      cursor: pointer;
+    } 
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    color: #036db9;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    padding: 50px 0 50px 130px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 487px;
+    background-color: #fff;
+    border-radius: 12px;
+
+    label {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+      margin-bottom: 24px;
+
+      input {
+        display: block;
+        margin-top: 8px;
+        width: 350px;
+        height: 60px;
+        left: 785px;
+        top: 445px;
+
+        padding-left: 20px;
+        font-size: 20px;
+
+        border: 1px solid #c1cad6;
+        box-sizing: border-box;
+        border-radius: 8px;
+      }
+    }
+
+    button {
+      width: 350px;
+      height: 70px;
+      border: none;
+      background: linear-gradient(90deg, #81d100 0%, #71b800 100%);
+      box-shadow: 0px 10px 15px rgba(129, 209, 0, 0.3);
+      border-radius: 35px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+
+      color: #ffffff;
+      &:hover {
+        cursor: pointer;
+      }
+      img {
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.open_modal {
+  display: flex;
+}

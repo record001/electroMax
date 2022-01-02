@@ -1,0 +1,138 @@
+.products {
+  background-image: url(../images/pr_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  &__title {
+    text-align: center;
+
+    h2 {
+      font-weight: 900;
+      font-size: 45px;
+      line-height: 55px;
+
+      text-align: center;
+
+      color: #036db9;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+
+      color: #939aa3;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 4%;
+    row-gap: 2%;
+  }
+
+  &__card {
+    padding-bottom: 32px;
+    position: relative;
+    background-image: url(../images/blue_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+
+    p {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+
+      color: #ffffff;
+    }
+
+    .bg_circle {
+      transform: translateX(6%);
+      width: 100%;
+    }
+    .pr {
+      position: absolute;
+      top: 13%;
+      left: 29%;
+      z-index: 1;
+    }
+  }
+
+  .down_price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 278px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    background: linear-gradient(90deg, #81d100 0%, #71b800 100%);
+    box-shadow: 0px 10px 15px rgba(129, 209, 0, 0.3);
+    border-radius: 35px;
+    border: none;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #ffffff;
+    img {
+      margin-right: 16px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// Media
+
+@media (max-width: 900px) {
+  .products__card .bg_circle {
+    transform: translateX(1%);
+  }
+
+  .products__card .pr {
+    width: 60%;
+    top: 10%;
+    left: 22%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products__wrapper {
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+    // row-gap: 5%;
+  }
+
+  .products .down_price {
+    margin-top: 160px;
+  }
+}
+@media (max-width: 425px) {
+  .products__wrapper {
+    grid-template-columns: 90%;
+    column-gap: 0;
+    row-gap: 1%;
+    justify-content: center;
+  }
+  .products__title h2 {
+    font-size: 32px;
+  }
+
+  .products .down_price {
+    margin-top: 325px;
+  }
+}

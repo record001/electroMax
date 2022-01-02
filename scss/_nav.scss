@@ -1,0 +1,179 @@
+.nav {
+  display: grid;
+  grid-template-columns: 25% 20% 24% 25%;
+  column-gap:2%;
+  align-items: center;
+  padding: 24px 0;
+
+
+  
+  .logo {
+    img {
+      margin-right: 16px;
+    }
+    display: flex;
+    // width: 252px;
+    
+    // height: 72px;
+    .el {
+      font-weight: 900;
+      font-size: 35px;
+      line-height: 36px;
+      color: #036db9;
+    }
+    .in {
+      font-weight: 900;
+      font-size: 35px;
+      line-height: 36px;
+      color: #81d100;
+    }
+  }
+
+  &__text {
+
+    display: flex;
+    align-items: center;
+    img {
+       margin-right: 24px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #939aa3;
+      // width: 178px;
+      // height: 34px;
+    }
+  }
+
+  &__telegram {
+
+    display: flex;
+
+    img:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      transition: 300ms;
+     
+
+    }
+    
+    p {
+      margin-top: 5px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #036db9;
+    }
+  }
+
+  &__call {
+
+    display: flex;
+
+    img:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      transition: 300ms;
+     
+
+    }
+    
+    p {
+      margin-top: 5px;
+   
+      font-size: 24px;
+      line-height: 29px;
+
+      color: #939aa3;
+
+      span {
+        color: #036DB9;
+        font-weight: 700;
+      }
+    }
+  }
+  
+}
+
+
+
+// media 
+@media (max-width: 1110px){
+ 
+  .nav__call p {
+    font-size: 20px;
+    
+}
+}
+@media (max-width: 1000px){
+ 
+  .nav__text p {
+    font-size: 12px;
+  }
+
+  .nav .logo .el {
+    font-size: 24px;
+  }
+
+  .nav__call p {
+    font-size: 15px;
+}
+}
+
+@media (max-width: 800px){
+
+  .nav {
+  grid-template-columns: 30% 30% 30% ;
+  column-gap: 3%;
+  align-items: center;
+
+  }
+//   .nav__text p {
+//     font-size: 15px;
+//   }
+
+//   .nav__call p {
+//     font-size: 18px;
+// }
+  .nav__telegram {
+    display: none;
+  } 
+}
+@media (max-width: 600px){
+  
+  .nav {
+    grid-template-columns: 45% 45%  ;
+    column-gap: 8%;
+    align-items: center;
+  
+    }
+  
+  .nav__call {
+    display: none;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .nav__text {
+    display: none;
+  }
+
+  .nav {
+    grid-template-columns: 90%;
+
+  
+    }
+    .logo {
+      display: block;
+      margin:0 auto;
+    }
+
+    .nav .logo .el {
+      font-size: 35px;
+  }
+  
+}

@@ -1,0 +1,145 @@
+.experts {
+  &__body {
+    padding-top: 48px;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    column-gap: 4%;
+    justify-content: center;
+  }
+
+  &__left {
+    padding-top: 52px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 55px;
+
+    color: #036db9;
+  }
+  &__wrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+    justify-content: center;
+  }
+
+  &__card {
+    p {
+      margin-top: 16px;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 19px;
+
+      color: #000000;
+    }
+  }
+  &__call {
+    margin-top: 50px;
+    width: 382px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #81d100 0%, #71b800 100%);
+    box-shadow: 0px 10px 15px rgba(129, 209, 0, 0.3);
+    border-radius: 35px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      margin-right: 12px;
+    }
+  }
+
+  &__right {
+    position: relative;
+
+    .elec_line {
+      width: 100%;
+    }
+
+    .electric {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+// media
+
+@media (max-width: 900px) {
+  .experts__call {
+    width: 320px;
+    font-size: 16px;
+  }
+
+  .experts__title {
+    font-size: 42px;
+  }
+
+  .experts__right .electric {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .experts__call {
+    width: 243px;
+    font-size: 13px;
+  }
+
+  .experts__title {
+    font-size: 32px;
+  }
+  .experts__card p {
+    font-size: 12px;
+  }
+
+  .experts__right .electric {
+    width: 60%;
+    top: 48px;
+    left: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .experts {
+    &__body {
+      grid-template-columns: 90%;
+      column-gap: 0%;
+      justify-content: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__card p {
+      font-size: 17px;
+    }
+    &__call {
+      width: 300px;
+      font-size: 16px;
+      margin: 20px auto;
+
+     
+    }
+
+    &__right .electric {
+      width: 50%;
+      top: 10px;
+      left: 20px;
+    }
+  }
+}
